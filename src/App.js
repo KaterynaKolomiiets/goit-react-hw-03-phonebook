@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { v4 } from "uuid";
-
 import "./App.css";
 import ContactForm from "./components/ContactForm/ContactForm";
 import Filter from "./components/Filter";
@@ -11,7 +10,6 @@ class App extends Component {
     contacts: [],
     filter: "",
   };
-  // нужно ли удалять пустой contacts из LocalStorage?
 
   componentDidMount() {
     if (localStorage.getItem("contacts")) {

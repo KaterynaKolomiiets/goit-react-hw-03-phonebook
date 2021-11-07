@@ -21,12 +21,10 @@ class App extends Component {
   componentDidUpdate(prevProps, prevState) {
     if (prevState.contacts.length !== this.state.contacts.length) {
       localStorage.setItem("contacts", JSON.stringify(this.state.contacts));
-      console.log(localStorage.getItem("contacts"));
     }
   }
 
   formSubmitHandler = (data) => {
-    console.log(data);
     if (
       this.state.contacts.some(
         (item) => item.name.toLowerCase() === data.name.toLowerCase()
